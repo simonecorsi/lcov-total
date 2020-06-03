@@ -7,7 +7,7 @@
 <!-- toc -->
 
 - [About The Project](#about-the-project)
-  * [Installation](#installation)
+- [Installation](#installation)
 - [Usage](#usage)
 - [Contributing](#contributing)
 - [License](#license)
@@ -17,8 +17,6 @@
 <!-- tocstop -->
 
 ## About The Project
-
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
 
 This simple package aim to parse `lcov.info` files and provide the total coverage `Number` without fancy formatting or anything else, either in stdout or programmatically.
 
@@ -30,7 +28,7 @@ Here's why:
 
 <!-- GETTING STARTED -->
 
-### Installation
+## Installation
 
 You can install locally
 
