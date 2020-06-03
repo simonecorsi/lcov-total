@@ -1,3 +1,1 @@
-export default {
-  helpers: ["**/fixtures/**/*", "**/helpers/**/*"],
-};
+export default {};
