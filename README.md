@@ -96,5 +96,4 @@ Simone Corsi - [@im_simonecorsi](https://twitter.com/im_simonecorsi)
 
 ## Acknowledgements
 
-- [Initial idea](#)
-- [lcov parsing mega switch](#)
+- [lcov parsing mega switch](https://github.com/davglass/lcov-parse) - from davglass
