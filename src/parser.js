@@ -1,18 +1,30 @@
 const fs = require("fs");
 
-/*
-Copyright (c) 2012, Yahoo! Inc. All rights reserved.
-Code licensed under the BSD License:
-http://yuilibrary.com/license/
-*/
-function fileWalker(file) {
-  let data = [];
-  let item;
+function format(file) {
+  const dataset = ["end_of_record"].concat(file.split("\n"));
 
-  ["end_of_record"].concat(file.split("\n")).forEach(function (line) {
-    line = line.trim();
-    let allparts = line.split(":");
-    let parts = [allparts.shift(), allparts.join(":")];
+  const data = dataset.map(function (current) {
+    const item = {
+      lines: {
+        found: 0,
+        hit: 0,
+        details: [],
+      },
+      functions: {
+        hit: 0,
+        found: 0,
+        details: [],
+      },
+      branches: {
+        hit: 0,
+        found: 0,
+        details: [],
+      },
+    };
+    const line = current.trim();
+    const allparts = line.split(":");
+    const parts = [allparts.shift(), allparts.join(":")];
+
     let lines;
     let fn;
 
@@ -75,26 +87,7 @@ function fileWalker(file) {
         break;
     }
 
-    if (line.indexOf("end_of_record") > -1) {
-      data.push(item);
-      item = {
-        lines: {
-          found: 0,
-          hit: 0,
-          details: [],
-        },
-        functions: {
-          hit: 0,
-          found: 0,
-          details: [],
-        },
-        branches: {
-          hit: 0,
-          found: 0,
-          details: [],
-        },
-      };
-    }
+    return item;
   });
 
   data.shift();
@@ -107,5 +100,5 @@ function fileWalker(file) {
 
 module.exports = function parse(filename) {
   const file = fs.readFileSync(filename, "utf-8");
-  return fileWalker(file);
+  return format(file);
 };
