@@ -10,8 +10,8 @@
     "type": "git",
     "url": "git+https://github.com/Kirkhammetz/lcov-total.git"
   },
-  "author": "Simone Corsi <simonecorsi.rm@gmail.com>",
-  "license": "ISC",
+  "author": "Simone Corsi <simonecorsi.dev@gmail.com>",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/Kirkhammetz/lcov-total/issues"
   },
