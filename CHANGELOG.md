@@ -1,10 +1,16 @@
+## <small>1.0.2 (2020-06-13)</small>
+
+
+
+
 ## <small>1.0.1 (2020-06-13)</small>
 
+* chore: bench ([e3dea10](https://github.com/Kirkhammetz/lcov-total/commit/e3dea10))
+* chore(release): 1.0.1 ([a7f6552](https://github.com/Kirkhammetz/lcov-total/commit/a7f6552))
 * ci: publish to npm on release ([a496b1c](https://github.com/Kirkhammetz/lcov-total/commit/a496b1c))
 * ci(github): added publish pipeline ([5fbeb10](https://github.com/Kirkhammetz/lcov-total/commit/5fbeb10))
 * ci(github): fixed actions runs-on ([64c48e6](https://github.com/Kirkhammetz/lcov-total/commit/64c48e6)), closes [#3](https://github.com/Kirkhammetz/lcov-total/issues/3)
 * ci(tests): run suite on ci ([eec5975](https://github.com/Kirkhammetz/lcov-total/commit/eec5975))
-* chore: bench ([e3dea10](https://github.com/Kirkhammetz/lcov-total/commit/e3dea10))
 * feat: moved to .map and added vscode debugger ([6721c89](https://github.com/Kirkhammetz/lcov-total/commit/6721c89))
 * feat: parse lcov.info get total ([3d0d682](https://github.com/Kirkhammetz/lcov-total/commit/3d0d682))
 * feat: parse lcov.info get total ([df3139f](https://github.com/Kirkhammetz/lcov-total/commit/df3139f))
