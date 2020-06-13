@@ -183,12 +183,12 @@ BRF:24
 BRH:16
 end_of_record
 TN:
-SF:plugins/jericho/index.js
-FN:12,JerichoPlugin
+SF:plugins/App/index.js
+FN:12,AppPlugin
 FN:14,(anonymous_1)
 FNF:2
 FNH:2
-FNDA:9,JerichoPlugin
+FNDA:9,AppPlugin
 FNDA:20,(anonymous_1)
 DA:3,8
 DA:4,8
@@ -210,7 +210,7 @@ BRF:2
 BRH:1
 end_of_record
 TN:
-SF:plugins/jericho/module/errors.js
+SF:plugins/App/module/errors.js
 FN:20,formatMessage
 FN:34,build
 FN:45,(anonymous_2)
@@ -247,7 +247,7 @@ BRF:2
 BRH:1
 end_of_record
 TN:
-SF:plugins/jericho/module/index.js
+SF:plugins/App/module/index.js
 FN:26,(anonymous_0)
 FN:40,(anonymous_1)
 FN:59,(anonymous_2)
@@ -398,7 +398,7 @@ BRF:33
 BRH:28
 end_of_record
 TN:
-SF:plugins/jericho/module/request.js
+SF:plugins/App/module/request.js
 FN:47,(anonymous_0)
 FN:74,(anonymous_1)
 FN:83,(anonymous_2)
@@ -626,7 +626,7 @@ BRF:52
 BRH:44
 end_of_record
 TN:
-SF:services/jericho/index.js
+SF:services/App/index.js
 FN:34,addSchemas
 FN:44,(anonymous_1)
 FN:46,(anonymous_2)
@@ -676,7 +676,7 @@ BRF:13
 BRH:13
 end_of_record
 TN:
-SF:services/jericho/handlers/examples.js
+SF:services/App/handlers/examples.js
 FNF:0
 FNH:0
 DA:1,7
@@ -686,7 +686,7 @@ BRF:0
 BRH:0
 end_of_record
 TN:
-SF:services/jericho/handlers/request.js
+SF:services/App/handlers/request.js
 FN:90,(anonymous_0)
 FNF:1
 FNH:1

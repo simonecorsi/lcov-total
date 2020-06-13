@@ -4,7 +4,7 @@
   "description": "Parsing lcov.info and returning total of the summary intended to use inside CI to exit if threshold not reach",
   "main": "src/index.js",
   "scripts": {
-    "test": "nyc --reporter=lcov  --reporter=text-summary ava"
+    "test": "ava"
   },
   "repository": {
     "type": "git",
@@ -24,11 +24,29 @@
       "path": "./node_modules/cz-conventional-changelog"
     }
   },
+  "keywords": [
+    "nodejs",
+    "npm",
+    "module",
+    "javascript",
+    "lcov",
+    "parser",
+    "total",
+    "coverage",
+    "total coverage",
+    "test coverage",
+    "nyc",
+    "cli",
+    "command",
+    "util",
+    "tdd",
+    "testing",
+    "test"
+  ],
   "devDependencies": {
     "@commitlint/cli": "^8.3.5",
     "@commitlint/config-conventional": "^8.3.4",
     "ava": "^3.8.2",
-    "benchmark": "^2.1.4",
     "cz-conventional-changelog": "^3.1.0",
     "eslint": "^7.1.0",
     "eslint-config-prettier": "^6.11.0",
@@ -37,9 +55,7 @@
     "husky": "^4.2.5",
     "lint-staged": "^10.2.1",
     "markdown-toc": "^1.2.0",
-    "nyc": "^15.1.0",
     "prettier": "^2.0.5",
     "standard-version": "^7.1.0"
-  },
-  "dependencies": {}
+  }
 }
