@@ -17,7 +17,6 @@ jobs:
       - run: npm t
 
   version:
-    needs: test
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -44,7 +43,6 @@ jobs:
           body: ${{ steps.changelog.outputs.changelog }}
 
   publish-npm:
-    needs: version
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
