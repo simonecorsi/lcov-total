@@ -14,7 +14,21 @@ test("should run, best test ever.", (t) => {
 
 test("Should run as a CLI", async (t) => {
   const { stdout } = await exec("node ./bin/cmd.js ./tests/fixtures/lcov.info");
-  t.is(stdout, String(T_COV));
+  t.is(stdout, `${T_COV}`);
+});
+
+test("Should exit(1) if lesser then equal 98", async (t) => {
+  let { code } = await t.throwsAsync(() =>
+    exec("node ./bin/cmd.js ./tests/fixtures/lcov.info --gte=98")
+  );
+  t.is(code, 1);
+});
+
+test("Should exit(0) if greater than equal then 90", async (t) => {
+  const { stdout } = await exec(
+    "node ./bin/cmd.js ./tests/fixtures/lcov.info --gte=90"
+  );
+  t.is(stdout, "0");
 });
 
 test("Should error on file missing", async (t) => {

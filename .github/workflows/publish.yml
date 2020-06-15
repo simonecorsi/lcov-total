@@ -44,7 +44,7 @@ jobs:
           body: ${{ steps.changelog.outputs.changelog }}
 
   publish-npm:
-    needs: [test, version]
+    needs: version
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
