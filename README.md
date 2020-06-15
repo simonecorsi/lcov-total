@@ -59,6 +59,14 @@ npx lcov-total lcov.info
 # 100.00
 ```
 
+If you pass the `--gte=value` flag you will get an exitCode 0 or 1 based on resulting `coverage >= value` expression, eg:
+
+```sh
+npx lcov-total lcov.info --gte=90
+echo $?
+# 0
+```
+
 Or programmatically
 
 ```js
