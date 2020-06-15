@@ -1,6 +1,6 @@
 {
   "name": "lcov-total",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Parsing lcov.info and returning total of the summary intended to use inside CI to exit if threshold not reach",
   "main": "src/index.js",
   "scripts": {
