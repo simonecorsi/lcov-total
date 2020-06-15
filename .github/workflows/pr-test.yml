@@ -4,6 +4,7 @@ on: [pull_request]
 
 jobs:
   test:
+    name: PR Test
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
