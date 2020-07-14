@@ -1,11 +1,13 @@
-## <small>1.0.5 (2020-06-23)</small>
+## <small>1.0.6 (2020-07-14)</small>
 
 * build: slimmed down npm pack ([74768d5](https://github.com/Kirkhammetz/lcov-total/commit/74768d5))
+* build(deps-dev): bump standard-version from 7.1.0 to 8.0.1 ([084f1a2](https://github.com/Kirkhammetz/lcov-total/commit/084f1a2))
 * chore: bench ([e3dea10](https://github.com/Kirkhammetz/lcov-total/commit/e3dea10))
 * chore(release): 1.0.1 ([a7f6552](https://github.com/Kirkhammetz/lcov-total/commit/a7f6552))
 * chore(release): 1.0.2 ([784dccc](https://github.com/Kirkhammetz/lcov-total/commit/784dccc))
 * chore(release): 1.0.3 ([4198ebd](https://github.com/Kirkhammetz/lcov-total/commit/4198ebd))
 * chore(release): 1.0.4 ([10621d0](https://github.com/Kirkhammetz/lcov-total/commit/10621d0))
+* chore(release): 1.0.5 ([73504d9](https://github.com/Kirkhammetz/lcov-total/commit/73504d9))
 * ci: fix ([83f9ffa](https://github.com/Kirkhammetz/lcov-total/commit/83f9ffa))
 * ci: publish to npm on release ([a496b1c](https://github.com/Kirkhammetz/lcov-total/commit/a496b1c))
 * ci: removed need ([ea15fbf](https://github.com/Kirkhammetz/lcov-total/commit/ea15fbf))
