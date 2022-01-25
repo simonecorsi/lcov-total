@@ -15,3 +15,4 @@ module.exports = function total(filename) {
   const coverageResult = new CoverageResult(fileResults);
   return coverageResult.coverage;
 };
+// 

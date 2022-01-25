@@ -21,9 +21,9 @@ if (require.main !== module) {
     const [, value] = gte.split("=");
     min = !isNaN(parseInt(value)) ? parseFloat(value) : 0;
     EXIT_CODE = result > min ? 0 : 1;
-    returnVal = `${EXIT_CODE}`;
+    returnVal = "";
   }
 
-  process.stdout.write(returnVal);
+  returnVal && process.stdout.write(returnVal);
   process.exit(EXIT_CODE);
 }
