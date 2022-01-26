@@ -1,10 +1,14 @@
 <h1 align="center">lcov-total</h1>
 
+<div align="center">
+
 ![release workflow](https://img.shields.io/github/workflow/status/simonecorsi/lcov-total/Release)
 [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier?style=flat-square)
 [![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg?style=flat-square)](https://github.com/semantic-release/semantic-release)
 ![npm (scoped)](https://img.shields.io/npm/v/lcov-total?style=flat-square)
 ![license](https://img.shields.io/github/license/simonecorsi/lcov-total)
+
+</div>
 
 ## Table of contents
 

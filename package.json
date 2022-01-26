@@ -48,7 +48,6 @@
     "@commitlint/cli": "^8.3.5",
     "@commitlint/config-conventional": "^8.3.4",
     "ava": "^3.8.2",
-    "cz-conventional-changelog": "^3.1.0",
     "eslint": "^7.1.0",
     "eslint-config-prettier": "^6.11.0",
     "eslint-plugin-node": "^11.1.0",
@@ -56,8 +55,7 @@
     "husky": "^6.0.0",
     "lint-staged": "^12.3.1",
     "markdown-toc": "^1.2.0",
-    "prettier": "^2.0.5",
-    "standard-version": "^8.0.1"
+    "prettier": "^2.0.5"
   },
   "volta": {
     "node": "16.13.2"
