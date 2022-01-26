@@ -26,6 +26,8 @@
 
 ## About
 
+> This module now uses ESM modules from `v2.0.0`, if you need to use CommonJS refer to `v1.x.x`
+
 This simple package aim to parse `lcov.info` files and provide the total coverage `Number` without fancy formatting or anything else, either in stdout or programmatically.
 
 Here's why:
