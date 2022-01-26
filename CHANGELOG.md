@@ -1,3 +1,15 @@
+# [2.0.0](https://github.com/simonecorsi/lcov-total/compare/v1.0.8...v2.0.0) (2022-01-26)
+
+
+### Features
+
+* esm modules ([1846627](https://github.com/simonecorsi/lcov-total/commit/1846627fd4a7a620df12dcc6123867873abda802))
+
+
+### BREAKING CHANGES
+
+* Moved to pure ESM modules
+
 ## <small>1.0.8 (2021-04-15)</small>
 
 * build(deps): bump y18n from 4.0.0 to 4.0.1 ([3287c04](https://github.com/simonecorsi/lcov-total/commit/3287c04))
@@ -29,6 +41,3 @@
 
 * chore(release): 1.0.4 ([10621d0](https://github.com/simonecorsi/lcov-total/commit/10621d0))
 * ci: removed need ([ea15fbf](https://github.com/simonecorsi/lcov-total/commit/ea15fbf))
-
-
-
