@@ -78,7 +78,7 @@ echo $?
 Or programmatically
 
 ```js
-const lcovTotal = require("lcov-total");
+import lcovTotal from "lcov-total";
 lcovTotal("/path/to/lcov.info"); // this throws if any error
 ```
 
