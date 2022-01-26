@@ -100,7 +100,7 @@ This projects uses [commitizen](https://github.com/commitizen/cz-cli) so be sure
 
 ## License
 
-Distributed under the MIT License. See `LICENSE` for more information.
+Distributed under the MIT License. See [`LICENSE`](./LICENSE) for more information.
 
 <!-- CONTACT -->
 
