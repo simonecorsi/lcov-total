@@ -1,7 +1,7 @@
-const { FileResult, CoverageResult } = require("./FileResult");
-const parser = require("./parser");
+import { FileResult, CoverageResult } from "./FileResult.js";
+import parser from "./parser.js";
 
-module.exports = function total(filename) {
+export default function total(filename) {
   const results = parser(filename);
 
   if (!results) {
@@ -14,5 +14,5 @@ module.exports = function total(filename) {
   });
   const coverageResult = new CoverageResult(fileResults);
   return coverageResult.coverage;
-};
-// 
+}
+//

@@ -2,10 +2,11 @@
   "name": "lcov-total",
   "version": "1.0.8",
   "description": "Parsing lcov.info and returning total of the summary intended to use inside CI to exit if threshold not reach",
-  "main": "src/index.js",
+  "export": "src/index.js",
+  "type": "module",
   "scripts": {
-    "test": "ava",
-    "prepare": "husky install"
+    "test": "NODE_ENV=test ava",
+    "prepare": "node prepare.js || echo 'Skipping prepare'"
   },
   "repository": {
     "type": "git",
@@ -60,6 +61,7 @@
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-prettier": "^4.0.0",
     "husky": "^6.0.0",
+    "is-ci": "^3.0.1",
     "lint-staged": "^12.3.1",
     "markdown-toc": "^1.2.0",
     "prettier": "^2.0.5",

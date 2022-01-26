@@ -1,4 +1,4 @@
-exports.FileResult = class FileResult {
+export class FileResult {
   constructor(fileName, linesResult) {
     this._name = fileName;
     this._result = linesResult;
@@ -20,9 +20,9 @@ exports.FileResult = class FileResult {
     let coverage = (this.executed / this.total) * 100;
     return parseFloat(coverage.toFixed(2));
   }
-};
+}
 
-exports.CoverageResult = class CoverageResult {
+export class CoverageResult {
   /**
    * @param {FileResult[]} fileResults
    */
@@ -44,4 +44,4 @@ exports.CoverageResult = class CoverageResult {
     let coverage = (executed / total) * 100;
     return parseFloat(coverage.toFixed(2));
   }
-};
+}

@@ -1,7 +1,9 @@
-const test = require("ava");
-const total = require("../src");
-const util = require("util");
-const exec = util.promisify(require("child_process").exec);
+import total from "../src/index.js";
+import test from "ava";
+import util from "util";
+import { exec as ex } from "node:child_process";
+
+const exec = util.promisify(ex);
 
 const FILEPATH = `${process.cwd()}/tests/fixtures/lcov.info`;
 const T_COV = 96.52;
