@@ -88,7 +88,7 @@ lcovTotal("/path/to/lcov.info"); // this throws if any error
 
 Project is pretty simple and straight forward for what is my needs, but if you have any idea you're welcome.
 
-This projects uses [commitizen](https://github.com/commitizen/cz-cli) so be sure to use standard commit format or PR won't be accepted
+This projects uses [commitlint](https://commitlint.js.org/) with Angular configuration so be sure to use standard commit format or PR won't be accepted.
 
 1. Fork the Project
 2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
