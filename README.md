@@ -8,6 +8,8 @@
 
 <!-- toc -->
 
+## Table of contents
+
 - [About The Project](#about-the-project)
 - [Installation](#installation)
 - [Usage](#usage)
@@ -18,7 +20,7 @@
 
 <!-- tocstop -->
 
-## About The Project
+## About
 
 This simple package aim to parse `lcov.info` files and provide the total coverage `Number` without fancy formatting or anything else, either in stdout or programmatically.
 
