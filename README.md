@@ -6,11 +6,11 @@
 ![npm (scoped)](https://img.shields.io/npm/v/lcov-total?style=flat-square)
 ![license](https://img.shields.io/github/license/simonecorsi/lcov-total)
 
-<!-- toc -->
-
 ## Table of contents
 
-- [About The Project](#about-the-project)
+<!-- toc -->
+
+- [About](#about)
 - [Installation](#installation)
 - [Usage](#usage)
 - [Contributing](#contributing)
