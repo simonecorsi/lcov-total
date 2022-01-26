@@ -25,10 +25,10 @@ test("Should exit(1) if lesser then equal 98", async (t) => {
 });
 
 test("Should exit(0) if greater than equal then 90", async (t) => {
-  const { stdout } = await exec(
+  const { stderr } = await exec(
     "node ./bin/cmd.js ./tests/fixtures/lcov.info --gte=90"
   );
-  t.is(stdout, "0");
+  t.is(stderr, "");
 });
 
 test("Should error on file missing", async (t) => {
