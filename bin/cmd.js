@@ -1,4 +1,5 @@
 #!/usr/bin/env node
+/* eslint-disable node/no-unpublished-bin */
 
 import total from "../src/index.js";
 
@@ -23,7 +24,7 @@ if (gte) {
 }
 
 if (returnVal) {
-  process.stdout.write(returnVal + "\n");
+  process.stdout.write(returnVal);
 }
 
 process.exit();

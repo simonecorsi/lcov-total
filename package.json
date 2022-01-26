@@ -2,11 +2,12 @@
   "name": "lcov-total",
   "version": "1.0.8",
   "description": "Parsing lcov.info and returning total of the summary intended to use inside CI to exit if threshold not reach",
+  "bin": "bin/cmd.js",
   "export": "src/index.js",
   "type": "module",
   "scripts": {
     "test": "NODE_ENV=test ava",
-    "prepare": "node prepare.js || echo 'Skipping prepare'"
+    "prepare": "node prepare.cjs || echo 'Skipping prepare'"
   },
   "repository": {
     "type": "git",
@@ -18,9 +19,6 @@
     "url": "https://github.com/simonecorsi/lcov-total/issues"
   },
   "homepage": "https://github.com/simonecorsi/lcov-total#readme",
-  "bin": {
-    "lcov-total": "./bin/cmd.js"
-  },
   "config": {
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
