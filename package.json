@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Kirkhammetz/lcov-total.git"
+    "url": "git+https://github.com/simonecorsi/lcov-total.git"
   },
   "author": "Simone Corsi <simonecorsi.dev@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Kirkhammetz/lcov-total/issues"
+    "url": "https://github.com/simonecorsi/lcov-total/issues"
   },
-  "homepage": "https://github.com/Kirkhammetz/lcov-total#readme",
+  "homepage": "https://github.com/simonecorsi/lcov-total#readme",
   "bin": {
     "lcov-total": "./bin/cmd.js"
   },
