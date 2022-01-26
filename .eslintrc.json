@@ -10,7 +10,7 @@
     "plugin:node/recommended"
   ],
   "parserOptions": {
-    "ecmaVersion": 2022,
+    "ecmaVersion": 11,
     "sourceType": "module"
   },
   "rules": {
