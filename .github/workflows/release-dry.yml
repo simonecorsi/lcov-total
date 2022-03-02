@@ -1,26 +1,8 @@
-name: Release
+name: DryRun Release
 
 on: [workflow_dispatch]
 
 jobs:
-  test:
-    strategy:
-      matrix:
-        os: [ubuntu-latest, macos-latest, windows-latest]
-        node-version: [12.x, 14.x, 16.x]
-
-    runs-on: ${{ matrix.os }}
-    steps:
-      - uses: actions/checkout@v3
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-      - uses: actions/setup-node@v3
-        with:
-          node-version: ${{ matrix.node-version }}
-
-      - name: Install dependencies
-        run: npm it
-
   release:
     needs: [test]
     runs-on: ubuntu-latest
@@ -28,7 +10,7 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 16
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v2
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
 
@@ -37,6 +19,8 @@ jobs:
 
       - name: Semantic release
         uses: codfish/semantic-release-action@v1
+        with:
+          dry_run: true
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_PUBLISH_TOKEN }}
