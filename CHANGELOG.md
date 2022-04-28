@@ -1,3 +1,10 @@
+# [2.1.0](https://github.com/simonecorsi/lcov-total/compare/v2.0.0...v2.1.0) (2022-04-28)
+
+
+### Features
+
+* **node:** deprecate v12 ([0e9d04b](https://github.com/simonecorsi/lcov-total/commit/0e9d04ba58e1de5a57278b2a20ffc37d832cd889))
+
 # [2.0.0](https://github.com/simonecorsi/lcov-total/compare/v1.0.8...v2.0.0) (2022-01-26)
 
 
