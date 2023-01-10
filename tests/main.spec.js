@@ -1,7 +1,8 @@
-import total from "../src/index.js";
+// eslint-disable-next-line node/no-missing-import
 import test from "ava";
+import { exec as ex } from "child_process";
+import total from "../src/index.js";
 import util from "util";
-import { exec as ex } from "node:child_process";
 
 const exec = util.promisify(ex);
 
@@ -31,6 +32,12 @@ test("Should exit(0) if greater than equal then 90", async (t) => {
     "node ./bin/cmd.js ./tests/fixtures/lcov.info --gte=90"
   );
   t.is(stderr, "");
+});
+
+test("Should exit(1) if checking for --gte=100", async (t) => {
+  await t.throwsAsync(
+    exec("node ./bin/cmd.js ./tests/fixtures/lcov.info --gte=100")
+  );
 });
 
 test("Should error on file missing", async (t) => {

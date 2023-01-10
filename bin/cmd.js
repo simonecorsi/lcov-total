@@ -19,7 +19,7 @@ let min = 0;
 if (gte) {
   const [, value] = gte.split("=");
   min = !isNaN(parseInt(value)) ? parseFloat(value) : 0;
-  process.exitCode = result > min ? 0 : 1;
+  process.exitCode = result >= min ? 0 : 1;
   returnVal = "";
 }
 
