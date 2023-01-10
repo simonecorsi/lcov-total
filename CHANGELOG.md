@@ -1,3 +1,10 @@
+## [2.1.1](https://github.com/simonecorsi/lcov-total/compare/v2.1.0...v2.1.1) (2023-01-10)
+
+
+### Bug Fixes
+
+* gte 100 exiting with 1 ([79e70ac](https://github.com/simonecorsi/lcov-total/commit/79e70acda51e5acec0fc1e77e6bf1a500361b30c)), closes [#122](https://github.com/simonecorsi/lcov-total/issues/122)
+
 # [2.1.0](https://github.com/simonecorsi/lcov-total/compare/v2.0.0...v2.1.0) (2022-04-28)
 
 
