@@ -45,7 +45,7 @@ You can install locally
 npm install lcov-total
 ```
 
-You can install glocally
+You can install globally
 
 ```sh
 npm install -g lcov-total
