@@ -18,7 +18,7 @@
     [
       "@saithodev/semantic-release-backmerge",
       {
-        "branches": ["next"],
+        "backmergeBranches": ["next"],
         "clearWorkspace": true
       }
     ]
