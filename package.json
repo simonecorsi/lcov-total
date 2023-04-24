@@ -63,7 +63,7 @@
     "lint-staged": "^13.0.3",
     "markdown-toc": "^1.2.0",
     "prettier": "^2.0.5",
-    "semantic-release": "^19.0.2"
+    "semantic-release": "^21.0.1"
   },
   "volta": {
     "node": "16.13.2"
