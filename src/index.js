@@ -14,4 +14,3 @@ export default function total(filename) {
     branchCoverage: coverageResult.branchCoverage,
   });
 }
-//

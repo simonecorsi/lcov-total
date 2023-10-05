@@ -1,4 +1,4 @@
-import { readFileSync } from "node:fs";
+import { readFileSync } from "fs";
 
 export default function parse(filename) {
   const file = readFileSync(filename, "utf-8");
