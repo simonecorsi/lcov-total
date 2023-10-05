@@ -7,12 +7,12 @@ import util from "util";
 const exec = util.promisify(ex);
 
 const FILEPATH = `${process.cwd()}/tests/fixtures/lcov.info`;
-const T_COV = 96.52;
+const T_COV = '{"totalCoverage":96.52,"branchCoverage":81.62}';
 
 test("should run, best test ever.", (t) => {
   const result = total(FILEPATH);
-  t.is(typeof result, "number");
-  t.is(result, T_COV);
+  t.is(typeof result, "string");
+  t.is(result, `${T_COV}`);
 });
 
 test("Should run as a CLI", async (t) => {
@@ -20,23 +20,23 @@ test("Should run as a CLI", async (t) => {
   t.is(stdout, `${T_COV}`);
 });
 
-test("Should exit(1) if lesser then equal 98", async (t) => {
+test("Should exit(1) if lesser than 98", async (t) => {
   let { code } = await t.throwsAsync(() =>
-    exec("node ./bin/cmd.js ./tests/fixtures/lcov.info --gte=98")
+    exec("node ./bin/cmd.js ./tests/fixtures/lcov.info --gte=98"),
   );
   t.is(code, 1);
 });
 
-test("Should exit(0) if greater than equal then 90", async (t) => {
+test("Should exit(0) if greater than or equal to 80", async (t) => {
   const { stderr } = await exec(
-    "node ./bin/cmd.js ./tests/fixtures/lcov.info --gte=90"
+    "node ./bin/cmd.js ./tests/fixtures/lcov.info --gte=80",
   );
   t.is(stderr, "");
 });
 
 test("Should exit(1) if checking for --gte=100", async (t) => {
   await t.throwsAsync(
-    exec("node ./bin/cmd.js ./tests/fixtures/lcov.info --gte=100")
+    exec("node ./bin/cmd.js ./tests/fixtures/lcov.info --gte=100"),
   );
 });
 

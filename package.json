@@ -6,7 +6,7 @@
   "export": "src/index.js",
   "type": "module",
   "scripts": {
-    "test": "NODE_ENV=test ava",
+    "test": "NODE_ENV=test ava --verbose --gte=45",
     "prepare": "node prepare.cjs || echo 'Skipping prepare'"
   },
   "repository": {
