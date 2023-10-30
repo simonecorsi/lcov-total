@@ -1,4 +1,4 @@
-import { readFileSync } from "node:fs";
+import { readFileSync } from "fs";
 
 export default function parse(filename) {
   const file = readFileSync(filename, "utf-8");
@@ -6,9 +6,9 @@ export default function parse(filename) {
 }
 
 export function format(file) {
-  const dataset = ["end_of_record"].concat(file.split("\n"));
+  const dataset = file?.split("\n");
 
-  const data = dataset.map(function (current) {
+  const data = dataset?.map(function (current) {
     const item = {
       lines: {
         found: 0,
@@ -95,10 +95,9 @@ export function format(file) {
     return item;
   });
 
-  data.shift();
-
-  if (!data.length) {
+  if (!data?.length) {
     throw new Error("FAILED_TO_PARSE_STRING");
   }
+
   return data;
 }

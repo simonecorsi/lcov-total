@@ -3,10 +3,11 @@
   "version": "2.1.1",
   "description": "Parsing lcov.info and returning total of the summary intended to use inside CI to exit if threshold not reach",
   "bin": "bin/cmd.js",
+  "main": "src/index.js",
   "export": "src/index.js",
   "type": "module",
   "scripts": {
-    "test": "NODE_ENV=test ava",
+    "test": "NODE_ENV=test ava --verbose",
     "prepare": "node prepare.cjs || echo 'Skipping prepare'"
   },
   "repository": {
@@ -57,7 +58,7 @@
     "eslint": "^8.7.0",
     "eslint-config-prettier": "^9.0.0",
     "eslint-plugin-node": "^11.1.0",
-    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-prettier": "^5.0.0",
     "husky": "^8.0.1",
     "is-ci": "^3.0.1",
     "lint-staged": "^14.0.1",

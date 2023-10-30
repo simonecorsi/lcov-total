@@ -14,12 +14,18 @@ if (!filename) {
 }
 
 const result = total(filename);
+
+const { totalCoverage, branchCoverage } = JSON.parse(result);
+
+// console.log({ totalCoverage, branchCoverage });
+
 let returnVal = `${result}`;
 let min = 0;
 if (gte) {
-  const [, value] = gte.split("=");
-  min = !isNaN(parseInt(value)) ? parseFloat(value) : 0;
-  process.exitCode = result >= min ? 0 : 1;
+  const [gteStr, value] = gte.split("=");
+  const isGte = gteStr === "--gte";
+  min = isGte && !isNaN(parseInt(value)) ? parseFloat(value) : 0;
+  process.exitCode = totalCoverage >= min && branchCoverage >= min ? 0 : 1;
   returnVal = "";
 }
 

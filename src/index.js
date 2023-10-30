@@ -1,4 +1,4 @@
-import { FileResult, CoverageResult } from "./FileResult.js";
+import { CoverageResult } from "./CoverageResult.js";
 import parser from "./parser.js";
 
 export default function total(filename) {
@@ -8,11 +8,9 @@ export default function total(filename) {
     throw new Error("content is empty");
   }
 
-  /** @type FileResult[] */
-  const fileResults = results.map((result) => {
-    return new FileResult(result.file, result.lines);
+  const coverageResult = new CoverageResult(results);
+  return JSON.stringify({
+    totalCoverage: coverageResult.coverage,
+    branchCoverage: coverageResult.branchCoverage,
   });
-  const coverageResult = new CoverageResult(fileResults);
-  return coverageResult.coverage;
 }
-//
