@@ -7,7 +7,7 @@
   "type": "module",
   "scripts": {
     "test": "NODE_ENV=test ava",
-    "prepare": "node prepare.cjs || echo 'Skipping prepare'"
+    "prepare": "node prepare.mjs || echo 'Skipping prepare'"
   },
   "repository": {
     "type": "git",
@@ -66,6 +66,6 @@
     "semantic-release": "^24.1.2"
   },
   "volta": {
-    "node": "16.13.2"
+    "node": "20.13.1"
   }
 }
