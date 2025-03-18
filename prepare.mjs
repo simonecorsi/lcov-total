@@ -1,13 +1,7 @@
-let isCi = false;
+import { execSync } from "node:child_process";
 
-try {
-  isCi = await import("is-ci").default;
-} catch (_) {
-  isCi = true;
-}
-
-if (!isCi) {
-  const { default: husky } = await import("husky");
-  husky();
-  console.log("husky install");
+if (process.env.CI !== "true") {
+	execSync("npx lefthook install", { stdio: "inherit" });
+} else {
+	console.log("Skipping Lefthook installation in CI");
 }
