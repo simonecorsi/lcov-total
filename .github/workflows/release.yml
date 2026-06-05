@@ -1,33 +1,51 @@
 name: Release
 
-on:
-  push:
-    branches: [main]
+on: [workflow_dispatch]
+
+permissions:
+  id-token: write # Required for OIDC
+  contents: read
 
 jobs:
-  test:
-    name: Run tests
-    uses: ./.github/workflows/test.yml
-
   release:
-    needs: [test]
+    name: Release
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/setup-node@v4
-        with:
-          node-version: 18
       - uses: actions/checkout@v4
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
           persist-credentials: false
+          fetch-depth: 0
 
-      - name: Install dependencies
-        run: npm i
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 24
+          registry-url: "https://registry.npmjs.org"
 
-      - name: Semantic release
-        uses: codfish/semantic-release-action@v3
+      - name: Config git user
+        run: |
+          git config --global user.name "${{ github.actor }}"
+          git config --global user.email "${{ github.actor }}@users.noreply.github.com"
+          git remote set-url origin https://${{ github.actor }}:${{ secrets.GH_NODE_TOKEN }}@github.com/${{ github.repository }}
+
+      - name: Bootstrap lerna
+        run: yarn
+
+      - name: Build packages
+        run: yarn build
+
+      - name: Bump release
+        if: github.ref == 'refs/heads/main'
+        run: yarn version:release
         env:
-          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
-          NPM_TOKEN: ${{ secrets.NPM_PUBLISH_TOKEN }}
-          GIT_AUTHOR_NAME: "${{ github.actor }}"
-          GIT_COMMITTER_NAME: "${{ github.actor }}"
+          GH_TOKEN: ${{ secrets.GH_NODE_TOKEN }}
+
+      - name: Bump prerelease
+        if: github.ref != 'refs/heads/main'
+        run: yarn version:prerelease
+        env:
+          GH_TOKEN: ${{ secrets.GH_NODE_TOKEN }}
+
+      - name: Publish packages
+        run: yarn publish:ci
+        env:
+          GH_TOKEN: ${{ secrets.GH_NODE_TOKEN }}
